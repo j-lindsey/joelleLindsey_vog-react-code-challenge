@@ -1,0 +1,6 @@
+.post_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 3rem 3rem;
+}

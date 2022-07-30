@@ -1,0 +1,11 @@
+.header_container{
+    height: 20vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.header_title{
+    font-size: 4rem;
+    margin-left: 40px;
+    padding-top: 40px;
+}

@@ -1,0 +1,28 @@
+.card_container {
+  background: var(--offwhite);
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  margin: 1rem 0.5rem;
+}
+.card_text {
+  padding: 3rem 2rem 3rem 2rem;
+}
+
+.card_user {
+  font-size: 1rem;
+}
+
+.card_title {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: var(--black);
+}
+
+.card_message {
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--black);
+}
