@@ -29,6 +29,7 @@ const CountrySelect = ({ setSelectedCountry }) => {
       showSearch
       placeholder="Select a country"
       optionFilterProp="children"
+      defaultValue={"Canada"}
       onChange={onChange}
       onSearch={onSearch}
       filterOption={(input, option) =>

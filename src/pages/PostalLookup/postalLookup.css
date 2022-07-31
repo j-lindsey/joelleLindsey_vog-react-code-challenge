@@ -1,0 +1,36 @@
+.postal_container{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 3rem 3rem;
+}
+
+.search_postal_icon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+}
+
+.map_container {
+  width: 60vw;
+  height: 600px;
+}
+
+.map_description{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.map_description h3{
+    font-size: 2rem;
+    padding: 0 10px;
+    color: var(--black);
+    font-family: "Lato" sans-serif;
+    font-weight:bold;
+}
+
+
+.map_title{
+    display:flex;
+}
