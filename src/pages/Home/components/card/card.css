@@ -22,6 +22,7 @@
   font-size: 1.5rem;
   letter-spacing: 0.5px;
   color: var(--black);
+  font-family: "Lato", sans-serif;
 }
 
 .card_message {
@@ -59,7 +60,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Lato", sans-serif;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -95,7 +96,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Lato", sans-serif;
   height: 48px;
   justify-content: center;
   line-height: 1;

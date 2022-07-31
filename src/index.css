@@ -3,7 +3,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -15,7 +17,8 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html,
+body {
   height: 100%;
 }
 /*
@@ -26,30 +29,45 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Raleway", sans-serif;
 }
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /*
   7. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -60,7 +78,14 @@ p, h1, h2, h3, h4, h5, h6 {
   --lightblue: #457b9d;
   --softblue: #a8dadc;
   --red: #e63946;
-  --offwhite: #f1faee;
-  --white: #fFFFFF;
+  --offwhite: hsl(40, 64%, 95%);
+  --white: #ffffff;
   --grey_label: #9a9a9a;
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #1d3557;
+  --toastify-color-success: #459d67;
+  --toastify-color-warning: #e6e039;
+  --toastify-color-error: #e63946;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
 }

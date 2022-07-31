@@ -1,12 +1,14 @@
-.header_container{
-    height: 20vh;
-    background-repeat:no-repeat;
-    background-size:cover;
+.header_container {
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.header_title{
-    font-size: 4rem;
-    margin-left: 100px;
-    padding-top: 50px;
-    color: var(--black);
+.header_title {
+  font-size: 4rem;
+  margin-left: 100px;
+  padding-top: 50px;
+  color: var(--black);
+  font-family: "Lato" sans-serif;
+  font-weight:bold;
 }
