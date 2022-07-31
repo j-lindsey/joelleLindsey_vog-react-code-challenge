@@ -15,6 +15,7 @@ const PostalLookup = () => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   const places = useSelector((state) => state.postalLookup.postalLookup.places);
+  const errorMessage = useSelector((state) => state.postalLookup.errorMessage);
 
   useEffect(() => {
     dispatch(getPostalLookup(90210));
@@ -50,6 +51,11 @@ const PostalLookup = () => {
             style={{ color: "#f1faee" }}
           />
         </div>
+        {
+          <div className="error_postal">
+            <p className="error_message">{errorMessage}</p>
+          </div>
+        }
         <div className="map_description">
           <div className="map_title">
             <h3>{!places ? null : places[0]["place name"]},</h3>

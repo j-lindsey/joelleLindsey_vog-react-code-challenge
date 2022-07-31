@@ -108,6 +108,9 @@
 }
 
 @media screen and (max-width: 48rem) {
+  .searchbar_container{
+    flex-direction:column;
+  }
   .searchbar_container input {
     width: 90vw;
   }

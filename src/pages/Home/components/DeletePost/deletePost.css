@@ -25,3 +25,9 @@
     letter-spacing: 1px;
     padding: 30px;
 }
+
+@media screen and (max-width: 48rem) {
+    .delete_post_container{
+        min-width:90vw;
+    }
+}

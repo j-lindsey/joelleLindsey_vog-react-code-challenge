@@ -1,9 +1,9 @@
-.postal_container{
-    position: relative;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    padding: 3rem 3rem;
+.postal_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 3rem;
 }
 
 .search_postal_icon {
@@ -17,20 +17,36 @@
   height: 600px;
 }
 
-.map_description{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.map_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.map_description h3{
-    font-size: 2rem;
-    padding: 0 10px;
-    color: var(--black);
-    font-family: "Lato" sans-serif;
-    font-weight:bold;
+.map_description h3 {
+  font-size: 2rem;
+  padding: 0 10px;
+  color: var(--black);
+  font-family: "Lato" sans-serif;
+  font-weight: bold;
 }
 
+.map_title {
+  display: flex;
+}
 
-.map_title{
-    display:flex;
+.error_postal {
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: 150px;
+}
+
+@media screen and (max-width: 66rem) {
+  .error_postal {
+    position: relative;
+    margin-right: 50px;
+  }
+  .map_title {
+    flex-direction: column;
+  }
 }

@@ -131,3 +131,9 @@
   border: 1px solid var(--red);
   border-radius: 5px;
 }
+
+@media screen and (max-width: 48rem) {
+  .add_post_container{
+    min-width:90vw;
+  }
+}
