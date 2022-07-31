@@ -1,0 +1,75 @@
+.title {
+  display: block;
+  margin: 0 auto;
+}
+
+.flip3D {
+  width: 240px;
+  height: 200px;
+  margin: 10px;
+  float: left;
+}
+
+.flip3D .front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 200px;
+  position: absolute;
+  transform: perspective(600px) rotateX(0deg);
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  background: var(--lightblue);
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transition: transform 0.6s linear 0s;
+  transition: -webkit-transform 0.6s linear 0s;
+  box-shadow: 0 0 30px 0.5px darkslategrey;
+  padding: 10px;
+}
+
+.flip3D .back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 200px;
+  position: absolute;
+  transform: perspective(600px) rotateX(180deg);
+  background: var(--softblue);
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transition: transform 0.6s linear 0s;
+  box-shadow: 0 0 30px 0.5px darkslategrey;
+  padding: 10px;
+}
+
+.flip3D:hover .front {
+  transform: perspective(600px) rotateX(-180deg);
+  box-shadow: 0 0 10px 0.5px darkslategrey;
+}
+
+.flip3D:hover .back {
+  transform: perspective(600px) rotateX(0deg);
+  box-shadow: 0 0 10px 0.5px darkslategrey;
+}
+
+.front h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.back ul {
+  list-style: none;
+  padding: 0;
+}
+
+.back ul li a {
+  color: var(--blue);
+}
+
+.back ul li a:hover{
+  color: var(--white);
+}
