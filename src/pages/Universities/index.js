@@ -34,7 +34,7 @@ const Universities = () => {
     const endSlice = (current - 1) * 24 + 24;
     const selectedUniversities = universities.slice(startSlice, endSlice);
     return selectedUniversities.map((university) => {
-      return <UniversityCard university={university} />;
+      return <UniversityCard key={university.name} university={university} />;
     });
   };
 

@@ -16,21 +16,21 @@ const UniversityCard = ({ university }) => {
         return;
       } else {
         return university.web_pages.map((webpage) => {
-          return <li key={webpage}><a href={webpage} target="_blank" rel="noopener">{webpage}</a></li>;
+          return <li key={webpage}><a href={webpage} target="_blank" rel="noreferrer">{webpage}</a></li>;
         });
       }
   };
   return (
-    <div class="wrapper">
-      <div class="title"></div>
-      <div class="flip3D">
-        <div class="back">
+    <div className="wrapper">
+      <div className="title"></div>
+      <div className="flip3D">
+        <div className="back">
           <h3>Webpages:</h3>
           <ul>{renderWebpages()}</ul>
           <h3>Domains: </h3>
           <ul>{renderDomains()}</ul>
         </div>
-        <div class="front">
+        <div className="front">
           <h2>{university.name}</h2>
           <h3>{university.country}</h3>
         </div>

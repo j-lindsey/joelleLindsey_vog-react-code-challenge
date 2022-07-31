@@ -6,8 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import Universities from "./pages/Universities";
 import PostalLookup from "./pages/PostalLookup";
-
-import "./App.css";
+import Loader from "./components/Loader/Loader";
 
 function App() {
   return (
@@ -15,10 +14,10 @@ function App() {
       <Routes>
         <Route path="/universities" element={<Universities />}></Route>
         <Route path="/postal" element={<PostalLookup />}></Route>
-        <Route exact path="/" element={<Home />}>
-        </Route>
+        <Route exact path="/" element={<Home />}></Route>
       </Routes>
       <ToastContainer />
+      <Loader />
     </div>
   );
 }
