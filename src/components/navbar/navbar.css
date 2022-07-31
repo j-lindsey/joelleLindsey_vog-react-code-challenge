@@ -13,6 +13,7 @@ nav ul {
   display: flex;
   align-items: center;
   list-style: none;
+  margin: 0;
 }
 
 nav ul li {
@@ -22,6 +23,10 @@ nav ul li {
 .nav_link {
   text-decoration: none;
   color: var(--blue);
+}
+
+.nav_link:hover {
+  color: var(--softblue);
 }
 
 .nav_link_active {
@@ -93,7 +98,7 @@ nav ul li {
     flex-direction: column;
     align-items: flex-start;
   }
-  nav ul li{
+  nav ul li {
     margin: 5px 0;
   }
 }
