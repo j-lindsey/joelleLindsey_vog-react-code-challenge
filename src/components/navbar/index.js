@@ -1,47 +1,103 @@
-import ReactDOM from "react-dom";
+import { useNavigate, NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
   faGraduationCap,
-  faEnvelopesBulk,
+  faEnvelopesBulk, faBars, faClose
 } from "@fortawesome/free-solid-svg-icons";
-import { Menu } from "antd";
-import 'antd/dist/antd.css';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const items = [
-  {
-    label: "Home",
-    key: "home",
-    icon: <FontAwesomeIcon icon={faHouse} />,
-  },
-  {
-    label: "Universities",
-    key: "universities",
-    icon: <FontAwesomeIcon icon={faGraduationCap} />,
-  },
-  {
-    label: "Postal Lookup",
-    key: "postalLookup",
-    icon: <FontAwesomeIcon icon={faEnvelopesBulk} />,
-  },
-];
+import "./navbar.css";
 
 const Navbar = () => {
-  const [current, setCurrent] = useState("home");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
 
-  const onClick = (e) => {
-    console.log("click ", e);
-    setCurrent(e.key);
-  };
+  console.log(activeLink);
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [activeLink, location.pathname]);
 
   return (
-    <Menu
-      onClick={onClick}
-      selectedKeys={[current]}
-      mode="horizontal"
-      items={items}
-    />
+    <nav className="nav">
+      <div className={toggleMenu ? "navbar show-nav" : "navbar nav_hidden"}>
+        <ul>
+          <li>
+            <NavLink
+              className={
+                activeLink === "/" ? "nav_link nav_link_active" : "nav_link"
+              }
+              to="/"
+              replace
+            >
+              <FontAwesomeIcon
+                className={
+                  activeLink === "/"
+                    ? "nav_link_icon nav_link_active"
+                    : "nav_link_icon"
+                }
+                icon={faHouse}
+              />
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={
+                activeLink === "/universities"
+                  ? "nav_link nav_link_active"
+                  : "nav_link"
+              }
+              to="/universities"
+              replace
+            >
+              <FontAwesomeIcon
+                className={
+                  activeLink === "/universities"
+                    ? "nav_link_icon nav_link_active"
+                    : "nav_link_icon"
+                }
+                icon={faGraduationCap}
+              />
+              Universities
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={
+                activeLink === "/postal"
+                  ? "nav_link nav_link_active"
+                  : "nav_link"
+              }
+              to="/postal"
+              replace
+            >
+              <FontAwesomeIcon
+                className={
+                  activeLink === "/postal"
+                    ? "nav_link_icon nav_link_active"
+                    : "nav_link_icon"
+                }
+                icon={faEnvelopesBulk}
+              />
+              Postal Lookup
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+      <button
+        className="nav_collapse"
+        onClick={() => setToggleMenu(!toggleMenu)}
+      >
+        {toggleMenu ? (
+          <FontAwesomeIcon icon={faBars} />
+        ) : (
+          <FontAwesomeIcon icon={faClose} />
+        )}
+      </button>
+    </nav>
   );
 };
 
