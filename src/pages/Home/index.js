@@ -36,7 +36,6 @@ const Home = () => {
   };
 
   const renderPosts = () => {
-    console.log(posts, typeof posts);
     if (!posts || posts.length === 0) {
       return;
     }

@@ -32,9 +32,7 @@ const Universities = () => {
   const renderUniversities = () => {
     const startSlice = (current - 1) * 24;
     const endSlice = (current - 1) * 24 + 24;
-    console.log(startSlice, endSlice);
     const selectedUniversities = universities.slice(startSlice, endSlice);
-    console.log(selectedUniversities);
     return selectedUniversities.map((university) => {
       return <UniversityCard university={university} />;
     });

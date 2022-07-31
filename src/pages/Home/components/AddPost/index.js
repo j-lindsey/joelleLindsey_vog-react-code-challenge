@@ -24,7 +24,6 @@ const AddPost = ({ onButtonClose }) => {
       const res = await addPosts(data);
       toast.success("Post was added successfully");
     } catch (e) {
-      console.log(e.response);
       toast.error(e.response);
     }
   };

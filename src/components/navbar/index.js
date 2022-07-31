@@ -1,4 +1,4 @@
-import { useNavigate, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -10,12 +10,10 @@ import React, { useEffect, useState } from "react";
 import "./navbar.css";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [toggleMenu, setToggleMenu] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
 
-  console.log(activeLink);
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [activeLink, location.pathname]);

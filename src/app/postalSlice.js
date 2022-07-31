@@ -15,12 +15,10 @@ const initialState = {
 export const getPostalLookup = createAsyncThunk(
   "postal/getPostalLookup",
   async (code, thunkAPI) => {
-    console.log(code);
     try {
       const response = await fetchPostalLookup(code);
       return response.data;
     } catch (error) {
-        console.log(error.response.status===404)
       if (error.response.status === 404) {
         return thunkAPI.rejectWithValue("Invalid Zip Code, please try again");
       } else {
@@ -43,7 +41,6 @@ export const postalSlice = createSlice({
     },
     [getPostalLookup.rejected]: (state, action) => {
       state.loading = false;
-      console.log(action.payload);
       state.errorMessage = action.payload;
     },
     [getPostalLookup.fulfilled]: (state, { payload }) => {

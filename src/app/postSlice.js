@@ -15,7 +15,6 @@ const initialState = {
 export const getPosts = createAsyncThunk(
   "post/getPosts",
   async (id, thunkAPI) => {
-    console.log(id);
     try {
       if (id === null) {
         const response = await fetchPosts();
