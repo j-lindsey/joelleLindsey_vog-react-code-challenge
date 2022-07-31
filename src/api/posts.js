@@ -29,3 +29,18 @@ export function addPosts(data) {
     data,
   });
 }
+
+export function deletePosts(id) {
+  return postApi({
+    url: `/${id}`,
+    method: "delete",
+  });
+}
+
+export function editPosts(id, data) {
+  return postApi({
+    url: `/${id}`,
+    method: "put",
+    data,
+  });
+}

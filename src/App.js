@@ -16,7 +16,6 @@ function App() {
         <Route path="/universities" element={<Universities />}></Route>
         <Route path="/postal" element={<PostalLookup />}></Route>
         <Route exact path="/" element={<Home />}>
-          {" "}
         </Route>
       </Routes>
       <ToastContainer />

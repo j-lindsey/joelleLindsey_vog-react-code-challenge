@@ -1,0 +1,15 @@
+.edit_post_text {
+  align-self: flex-start;
+}
+.edit_post_text p {
+  font: 1rem Arial, sans-serif;
+  color: var(--blue);
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.add_post_form .title{
+    height: 70px;
+}
