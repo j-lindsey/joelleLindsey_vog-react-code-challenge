@@ -30,8 +30,8 @@ const Universities = () => {
   }, [country]);
 
   const renderUniversities = () => {
-    const startSlice = (current - 1) * 20;
-    const endSlice = (current - 1) * 20 + 20;
+    const startSlice = (current - 1) * 24;
+    const endSlice = (current - 1) * 24 + 24;
     console.log(startSlice, endSlice);
     const selectedUniversities = universities.slice(startSlice, endSlice);
     console.log(selectedUniversities);

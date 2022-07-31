@@ -2,7 +2,9 @@ import { Select } from "antd";
 import "antd/dist/antd.css";
 import { useSelector } from "react-redux/es/exports";
 import React from "react";
+import './countryselect.css';
 const { Option } = Select;
+
 
 const CountrySelect = ({ setSelectedCountry }) => {
   const countries = useSelector((state) => state.universities.countries);
