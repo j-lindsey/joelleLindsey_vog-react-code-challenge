@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const universitiesApi = axios.create({
-  baseURL: "http://universities.hipolabs.com/",
+  baseURL: "https://pure-fortress-21213.herokuapp.com/universities.hipolabs.com/",
   timeout: 50000,
   headers: {
     "Content-Type": "application/json;",
