@@ -21,7 +21,7 @@ const items = [
     icon: <FontAwesomeIcon icon={faGraduationCap} />,
   },
   {
-    label: "PostalLookup",
+    label: "Postal Lookup",
     key: "postalLookup",
     icon: <FontAwesomeIcon icon={faEnvelopesBulk} />,
   },

@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchPosts } from "../api/posts";
+import { fetchPosts, fetchPostsById } from "../api/posts";
 
 const initialState = {
   loading: false,
-  errorMessage: '',
+  errorMessage: "",
   posts: [],
 };
 
@@ -12,14 +12,23 @@ const initialState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const getPosts = createAsyncThunk("post/getPosts", async (thunkAPI) => {
-  try {
-    const response = await fetchPosts();
-    return response.data;
-  } catch (error) {
-    return thunkAPI.rejectiWithValue(error);
+export const getPosts = createAsyncThunk(
+  "post/getPosts",
+  async (id, thunkAPI) => {
+    console.log(id)
+    try {
+      if (id === null) {
+        const response = await fetchPosts();
+        return response.data;
+      } else {
+        const response = await fetchPostsById(id);
+        return response.data;
+      }
+    } catch (error) {
+      return thunkAPI.rejectiWithValue(error);
+    }
   }
-});
+);
 
 export const postSlice = createSlice({
   name: "post",

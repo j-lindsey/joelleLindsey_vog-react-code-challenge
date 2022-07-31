@@ -1,6 +1,114 @@
 .post_container {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 3rem 3rem;
+}
+
+.searchbar_container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: -90px;
+  right: 50px;
+  z-index: 10;
+}
+
+.searchbar_container input {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  letter-spacing: 1.08px;
+  padding-left: 50px;
+  height: 51px;
+  width: 35vw;
+  border-radius: 6px;
+  background: var(--lightblue);
+  color: var(--offwhite);
+}
+
+.searchbar_container input::placeholder {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  letter-spacing: 1.08px;
+  color: var(--offwhite);
+}
+
+.search_icon {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+}
+
+.add_post {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    var(--softblue) 0,
+    var(--blue) 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.add_post:focus {
+  box-shadow: var(--blue) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--blue) 0 -3px 0 inset;
+}
+
+.add_post:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--blue) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.add_post:active {
+  box-shadow: var(--blue) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 66rem) {
+  .searchbar_container {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .searchbar_container input {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .searchbar_container input {
+    width: 90vw;
+  }
 }

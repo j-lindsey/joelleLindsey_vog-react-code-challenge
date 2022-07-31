@@ -4,13 +4,17 @@
   border-radius: 10px;
   box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
   margin: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card_text {
-  padding: 3rem 2rem 3rem 2rem;
+  padding: 3rem 2rem 0 2rem;
 }
 
 .card_user {
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .card_title {
@@ -25,4 +29,111 @@
   font-size: 1rem;
   line-height: 1.45;
   color: var(--black);
+}
+
+.card_ids {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+.edit_post {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    var(--softblue) 0,
+    var(--lightblue) 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.delete_post {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    hsl(355, 78%, 90%) 0,
+    var(--red) 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.edit_post:focus,
+.delete_post:focus {
+  box-shadow: var(--blue) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--blue) 0 -3px 0 inset;
+}
+
+.edit_post:hover,
+.delete_post:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--blue) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.edit_post:active {
+  box-shadow: var(--blue) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.delete_post:active {
+  box-shadow:  hsl(355, 78%, 40%) 0 3px 7px inset;
+  transform: translateY(2px);
 }

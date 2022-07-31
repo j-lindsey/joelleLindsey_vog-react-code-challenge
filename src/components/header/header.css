@@ -6,6 +6,7 @@
 
 .header_title{
     font-size: 4rem;
-    margin-left: 40px;
-    padding-top: 40px;
+    margin-left: 100px;
+    padding-top: 50px;
+    color: var(--black);
 }

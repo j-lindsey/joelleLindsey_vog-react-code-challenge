@@ -14,3 +14,18 @@ export function fetchPosts() {
     method: "get",
   });
 }
+
+export function fetchPostsById(id) {
+  return postApi({
+    url: `/${id}`,
+    method: "get",
+  });
+}
+
+export function addPosts(data) {
+  return postApi({
+    url: ``,
+    method: "post",
+    data,
+  });
+}
